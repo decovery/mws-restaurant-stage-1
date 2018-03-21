@@ -126,7 +126,7 @@ class DBHelper {
    */
   static fetchCuisines(callback) {
     // Fetch all restaurants
-    DBHelper.fetchRestaurants((error, restaurants) => {
+    imageSrcSetLargeForRestaurant(restaurant).fetchRestaurants((error, restaurants) => {
       if (error) {
         callback(error, null);
       } else {
@@ -152,7 +152,18 @@ class DBHelper {
   static imageUrlForRestaurant(restaurant) {
     return (`/img/${restaurant.photograph}`);
   }
-
+  /**
+   * Responsive restaurant images URL.
+   */
+   // Medium size
+  static imageSrcSetMediumForRestaurant(restaurant) {
+    return (`/img/dist/${restaurant.id}-400w.jpg`);
+  }
+  // Large size
+  static imageSrcSetLargeForRestaurant(restaurant) {
+    return (`/img/dist/${restaurant.id}-800w.jpg`);
+  }
+  
   /**
    * Map marker for a restaurant.
    */
