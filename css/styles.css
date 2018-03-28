@@ -241,15 +241,18 @@ nav h1 a {
   background: #ccc none repeat scroll 0 0;
   position: fixed;
   right: 0;
-  margin-top: 65px;
+  margin-top: 110px;
   width: 100%;
   height: calc(100vh - 65px);
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+  /*-webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);*/
+  visibility: hidden;
 }
 .inside #map-container.open {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+  /*-webkit-transform: translate(0, 0);
+  transform: translate(0, 0);*/
+  z-index: 100;
+  visibility: visible;
 }
 .inside #map {
   background-color: #ccc;
@@ -380,8 +383,10 @@ nav h1 a {
   }
   .inside #map-container {
     width: 50%;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+    margin-top: 65px;
+    /*-webkit-transform: translate(0, 0);
+    transform: translate(0, 0);*/
+    visibility: visible;
   }
   .inside #footer {
     width: 50%;
@@ -411,8 +416,9 @@ nav h1 a {
   }
   .inside #map-container {
     width: 60%;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+    visibility: visible;
+    /*-webkit-transform: translate(0, 0);
+    transform: translate(0, 0);*/
   }
   .inside #footer {
     width: 40%;

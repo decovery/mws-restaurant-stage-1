@@ -126,7 +126,7 @@ class DBHelper {
    */
   static fetchCuisines(callback) {
     // Fetch all restaurants
-    imageSrcSetLargeForRestaurant(restaurant).fetchRestaurants((error, restaurants) => {
+    DBHelper.fetchRestaurants((error, restaurants) => {
       if (error) {
         callback(error, null);
       } else {

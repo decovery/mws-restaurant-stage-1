@@ -10,14 +10,14 @@
 </head>
 
 <body>
-  <header>
+  <header role="banner">
     <a href="#maincontent" class="skip-link">Skip to content</a>
-    <nav>
+    <nav role="navigation">
       <h1><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
-  <main id="maincontent">
-    <section id="map-container" aria-hidden="true">
+  <main id="maincontent" role="main">
+    <section id="map-container">
       <div id="map" role="application" aria-label="Restaurant map"></div>
     </section>
     <section>
@@ -40,9 +40,20 @@
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAui3AhWRvIsdHtEmtQZifXEdBICaHqwQ4&libraries=places&callback=initMap"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+      .then(function(reg) {
+        console.log('Registration succeeded.');
+      }).catch(function(error) {
+        console.log('Registration failed with ' + error);
+      });
+    }
+  </script>
+  
 
 
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
     Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
