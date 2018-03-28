@@ -4,11 +4,6 @@ window.onload = function() {
 
 	mapToggle.addEventListener('click', function(e) {
 		map.classList.toggle('open');
-		// if(map.hasAttribute('aria-hidden')) {
-		// 	map.removeAttribute('aria-hidden');
-		// } else {
-		// 	map.setAttribute('aria-hidden', true);
-		// }
 		e.stopPropagation();
 	});
 };

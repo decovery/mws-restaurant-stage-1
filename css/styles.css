@@ -244,13 +244,9 @@ nav h1 a {
   margin-top: 110px;
   width: 100%;
   height: calc(100vh - 65px);
-  /*-webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);*/
   visibility: hidden;
 }
 .inside #map-container.open {
-  /*-webkit-transform: translate(0, 0);
-  transform: translate(0, 0);*/
   z-index: 100;
   visibility: visible;
 }
@@ -417,8 +413,6 @@ nav h1 a {
   .inside #map-container {
     width: 60%;
     visibility: visible;
-    /*-webkit-transform: translate(0, 0);
-    transform: translate(0, 0);*/
   }
   .inside #footer {
     width: 40%;
